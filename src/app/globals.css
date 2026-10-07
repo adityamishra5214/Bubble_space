@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #F7F5F0;
+  --bg-sidebar: #EFECE6;
+  --bg-card: #FFFFFF;
+  --bg-elevated: #FAF8F5;
+  --bg-pill-yellow: #FEF9C3;
+  --border-main: #DCD7CE;
+  --border-subtle: #E8E4DC;
+  --border-dark: #1C1A17;
+  --text-main: #1C1A17;
+  --text-muted: #736D64;
+  --text-light: #9B9489;
+  --accent-gold: #EAB308;
+  --accent-coral: #EF4444;
+  --accent-blue: #2563EB;
+  --accent-green: #10B981;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F5F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCD7CE;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BFB9AE;
+}
+
+/* React Flow Notebook Styling */
+.react-flow__background {
+  background-color: #F7F5F0 !important;
+}
+
+.react-flow__edge-path {
+  stroke: #1C1A17 !important;
+  stroke-width: 1.8 !important;
+}
+
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #0284C7 !important;
+  stroke-width: 2.2 !important;
+}
+
+.react-flow__controls {
+  background: #FFFFFF !important;
+  border: 1px solid #DCD7CE !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+}
+
+.react-flow__controls-button {
+  background: #FFFFFF !important;
+  border-bottom: 1px solid #E8E4DC !important;
+  color: #1C1A17 !important;
+  fill: #1C1A17 !important;
+}
+
+.react-flow__controls-button:hover {
+  background: #F4F1EB !important;
+}
+
+.react-flow__minimap {
+  background: #FFFFFF !important;
+  border: 1px solid #DCD7CE !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+}
+
+.react-flow__handle {
+  width: 9px !important;
+  height: 9px !important;
+  background-color: #1C1A17 !important;
+  border: 2px solid #FFFFFF !important;
+  border-radius: 50% !important;
+}
+
+.react-flow__handle:hover {
+  background-color: #0284C7 !important;
+  transform: scale(1.3);
+}
+
+/* Pulse animation */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
